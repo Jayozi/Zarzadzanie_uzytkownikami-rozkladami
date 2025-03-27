@@ -5,25 +5,20 @@
              BackgroundColor="#F5F5F5">
 
     <Grid>
-        <!-- Dzielimy ekran na dwie kolumny -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <!-- Kolumna na przyciski -->
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sekcja przycisków (z lewej) -->
         <ScrollView Grid.Column="0">
             <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
 
-                <!-- Nagłówek Panelu Administratora -->
                 <Label Text="Panel Administratora"
                        FontSize="32"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        TextColor="Black"/>
 
-                <!-- Zarządzanie autobusami -->
                 <Button Text="Zarządzaj autobusami"
                         BackgroundColor="#2196F3"
                         TextColor="White"
@@ -31,8 +26,7 @@
                         CornerRadius="25"
                         HeightRequest="50"
                         Clicked="OnViewSchedule"/>
-
-                <!-- Zarządzanie użytkownikami -->
+                
                 <Button Text="Zarządzaj użytkownikami"
                         BackgroundColor="#4CAF50"
                         TextColor="White"
@@ -41,7 +35,6 @@
                         HeightRequest="50"
                         Clicked="OnManageUserClicked"/>
 
-                <!-- Panel zarządzania użytkownikami -->
                 <StackLayout x:Name="userManagementPanel" IsVisible="False" Spacing="10">
                     <Frame CornerRadius="15" Padding="10" BackgroundColor="White" HasShadow="True">
                         <CollectionView x:Name="UserList" HeightRequest="300">
@@ -94,7 +87,6 @@
                         <Button Text="Dodaj użytkownika" Clicked="OnAddUserToDatabase" TextColor="White"/>
                     </StackLayout>
 
-                    <!-- Zmiana hasła -->
                     <Button Text="Zmień hasło"
                         BackgroundColor="#FF5722"
                         TextColor="White"
@@ -104,7 +96,6 @@
                         Clicked="OnChangePassword"/>
                 </StackLayout>
 
-                <!-- Wylogowanie -->
                 <Button Text="Wyloguj się"
                         BackgroundColor="Red"
                         TextColor="White"
@@ -115,7 +106,6 @@
             </StackLayout>
         </ScrollView>
 
-        <!-- Sekcja obrazu (z prawej) -->
         <Image Grid.Column="1" Source="fast_adm_bus.png" Aspect="AspectFill"/>
 
     </Grid>
