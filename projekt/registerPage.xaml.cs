@@ -10,7 +10,6 @@ namespace projekt
             InitializeComponent();
         }
 
-        // Metoda wywoływana po kliknięciu ikony strzałki
         private async void OnBackButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();

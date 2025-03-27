@@ -17,11 +17,9 @@ namespace projekt
 
         private async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            // Pobierz dane z pól Entry
             string email = emailEntry.Text;
             string password = passwordEntry.Text;
 
-            // Sprawdź, czy lista użytkowników nie jest pusta
             var user = userManager.ListaUzytkownikow.FirstOrDefault(u => u.Email == email && u.Haslo == password);
             LoggedInUser = user;
 
@@ -38,7 +36,6 @@ namespace projekt
             }
             else
             {
-                // Jeśli nie znaleziono użytkownika, wyświetl błąd
                 ErrorLabel.Text = "Niepoprawny e-mail lub hasło!";
             }
         }
